@@ -1,0 +1,8 @@
+D:\MyFolder\GitHubProjects\IJuniorNapilnik\Инкапсуляция1\Инкапсуляция1\bin\Debug\Инкапсуляция1.exe.config
+D:\MyFolder\GitHubProjects\IJuniorNapilnik\Инкапсуляция1\Инкапсуляция1\bin\Debug\Инкапсуляция1.exe
+D:\MyFolder\GitHubProjects\IJuniorNapilnik\Инкапсуляция1\Инкапсуляция1\bin\Debug\Инкапсуляция1.pdb
+D:\MyFolder\GitHubProjects\IJuniorNapilnik\Инкапсуляция1\Инкапсуляция1\obj\Debug\Инкапсуляция1.csproj.AssemblyReference.cache
+D:\MyFolder\GitHubProjects\IJuniorNapilnik\Инкапсуляция1\Инкапсуляция1\obj\Debug\Инкапсуляция1.csproj.SuggestedBindingRedirects.cache
+D:\MyFolder\GitHubProjects\IJuniorNapilnik\Инкапсуляция1\Инкапсуляция1\obj\Debug\Инкапсуляция1.csproj.CoreCompileInputs.cache
+D:\MyFolder\GitHubProjects\IJuniorNapilnik\Инкапсуляция1\Инкапсуляция1\obj\Debug\Инкапсуляция1.exe
+D:\MyFolder\GitHubProjects\IJuniorNapilnik\Инкапсуляция1\Инкапсуляция1\obj\Debug\Инкапсуляция1.pdb

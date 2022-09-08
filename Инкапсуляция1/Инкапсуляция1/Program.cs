@@ -10,34 +10,78 @@ namespace Инкапсуляция1
     {
         static void Main(string[] args)
         {
-            
+            Player player = new Player("Bob", 100);
+            Weapon gun = new Weapon(1, 35);
+            Bot bot = new Bot(gun);
+
+            bot.OnSeePlayer(player);
         }
     }
 
-    class Weapon
+    public class Weapon
     {
-        public int Damage;
-        public int Bullets;
+        private int _bullets;
+        private int _damage;
+
+        public Weapon(int bullets, int damage)
+        {
+            if (bullets <= 0)
+                throw new ArgumentOutOfRangeException(nameof(bullets));
+
+            if (damage < 0)
+                throw new ArgumentOutOfRangeException(nameof(damage));
+
+            _bullets = bullets;
+            _damage = damage;
+        }
 
         public void Fire(Player player)
         {
-            player.Health -= Damage;
-            Bullets -= 1;
+            if (_bullets <= 0)
+                throw new InvalidOperationException("Нельзя стрелять без патрон в обойме!");
+
+            _bullets--;
+            Console.WriteLine($"Бах! В обойме осталось {_bullets} пуль");
+            player.ApplyDamage(_damage);
         }
     }
 
-    class Player
+    public class Player
     {
-        public int Health;
+        public string Name { get; private set; }
+        public int Health { get; private set; }
+
+        public Player(string name, int health)
+        {
+            if (health <= 0)
+                throw new ArgumentOutOfRangeException(nameof(health));
+
+            Name = name;
+            Health = health;
+        }
+
+        public void ApplyDamage(int damage)
+        {
+            if (damage < 0)
+                throw new ArgumentOutOfRangeException(nameof(damage));
+
+            Health -= damage;
+            Console.WriteLine($"{Name} получил {damage} ед. урона, у него осталось {Health} здоровья");
+        }
     }
 
-    class Bot
+    public class Bot
     {
-        public Weapon Weapon;
+        private Weapon _weapon;
+
+        public Bot(Weapon weapon)
+        {
+            _weapon = weapon;
+        }
 
         public void OnSeePlayer(Player player)
         {
-            Weapon.Fire(player);
+            _weapon.Fire(player);
         }
     }
 }
