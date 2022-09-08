@@ -10,6 +10,7 @@ namespace Инкапсуляция2
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("hello");
         }
     }
 }
